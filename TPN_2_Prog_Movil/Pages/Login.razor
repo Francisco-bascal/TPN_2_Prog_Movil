@@ -1,0 +1,31 @@
+﻿@inject NavigationManager Nav
+@page "/login"
+
+<h1 class="text-center">Login</h1>
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <EditForm Model="usuario" OnValidSubmit="Validar">
+        <label class="form-control">Usuario</label>
+        <InputText @bind-Value="usuario.Nombre" class="form-control"/>
+
+        <label class="form-control">Contraseña</label>
+        <InputText @bind-Value="usuario.Contraseña" class="form-control" type="password"/>
+
+
+        <button type="submit" class="btn btn-sm btn-primary my-2">Login</button>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+    </EditForm>
+</div>
+
+@code {
+    public Usuario usuario { get; set; } = new Usuario();
+
+    public void Validar()
+    {
+        if (usuario.Nombre.Equals("alumno") && usuario.Contraseña.Equals("1234"))
+        {
+            Nav.NavigateTo("/"); 
+        }
+    }
+}

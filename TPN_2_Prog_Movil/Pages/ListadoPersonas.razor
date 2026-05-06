@@ -1,0 +1,145 @@
+﻿@page "/lista-personas"
+
+<h1 class="text-center">Lista de Personas</h1>
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark text-light">
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Domicilio</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var persona in Personas)
+            {
+                <tr>
+                    <td>@persona.IdPersona</td>
+                    <td>@persona.Nombre</td>
+                    <td>@persona.Apellido</td>
+                    <td>@persona.Email</td>
+                    <td>@persona.Domicilio</td>
+                    <td>@persona.FechaNacimiento</td>
+                    <td><img src="@persona.RutaImagen" alt="FalloutBoy" style="max-height: 30px; max-width: 30px"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    public List<Persona> Personas { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        Personas.AddRange( //Agregamos una lista a la que le inicializamos los valores de los objetos de persona, a los cuales también creamos inicializando sus valores
+        new List<Persona>
+        {
+            new Persona
+            {
+                IdPersona = 1,
+                Nombre = "Pepe",
+                Apellido = "Rodriguez",
+                Domicilio = "Avenida San Martín 120",
+                Email = "peperodriguez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 2,
+                Nombre = "Pepe",
+                Apellido = "Fernandez",
+                Domicilio = "Avenida San Martín 130",
+                Email = "pepefernandez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 3,
+                Nombre = "Roberto",
+                Apellido = "Gonzalez",
+                Domicilio = "Avenida San Martín 140",
+                Email = "robertogonzalez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 4,
+                Nombre = "Juan",
+                Apellido = "Perez",
+                Domicilio = "Avenida San Martín 150",
+                Email = "juanperez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 5,
+                Nombre = "Martin",
+                Apellido = "Herbsomer",
+                Domicilio = "Avenida San Martín 160",
+                Email = "martinherbsomer@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 6,
+                Nombre = "Lucas",
+                Apellido = "Martinez",
+                Domicilio = "Avenida San Martín 170",
+                Email = "lucasmartinez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 7,
+                Nombre = "Sofia",
+                Apellido = "Lopez",
+                Domicilio = "Avenida San Martín 180",
+                Email = "sofialopez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 8,
+                Nombre = "Carla",
+                Apellido = "Diaz",
+                Domicilio = "Avenida San Martín 190",
+                Email = "carladiaz@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 9,
+                Nombre = "Diego",
+                Apellido = "Sanchez",
+                Domicilio = "Avenida San Martín 200",
+                Email = "diegosanchez@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            },
+            new Persona
+            {
+                IdPersona = 10,
+                Nombre = "Valeria",
+                Apellido = "Romero",
+                Domicilio = "Avenida San Martín 210",
+                Email = "valeriaromero@gmail.com",
+                FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
+                RutaImagen = "Images/FalloutBoy.png"
+            }
+        });
+    }
+}
