@@ -34,6 +34,7 @@
 
 @code {
     public List<Persona> Personas { get; set; } = new();
+    public string Ruta { get; set; } = "Images/FalloutBoy.png"; //para centralizar el manejo de la ruta de la imagen para las personas
 
     protected override void OnInitialized()
     {
@@ -48,7 +49,7 @@
                 Domicilio = "Avenida San Martín 120",
                 Email = "peperodriguez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -58,7 +59,7 @@
                 Domicilio = "Avenida San Martín 130",
                 Email = "pepefernandez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -68,7 +69,7 @@
                 Domicilio = "Avenida San Martín 140",
                 Email = "robertogonzalez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -78,7 +79,7 @@
                 Domicilio = "Avenida San Martín 150",
                 Email = "juanperez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -88,7 +89,7 @@
                 Domicilio = "Avenida San Martín 160",
                 Email = "martinherbsomer@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -98,7 +99,7 @@
                 Domicilio = "Avenida San Martín 170",
                 Email = "lucasmartinez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -108,7 +109,7 @@
                 Domicilio = "Avenida San Martín 180",
                 Email = "sofialopez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -118,7 +119,7 @@
                 Domicilio = "Avenida San Martín 190",
                 Email = "carladiaz@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -128,7 +129,7 @@
                 Domicilio = "Avenida San Martín 200",
                 Email = "diegosanchez@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             },
             new Persona
             {
@@ -138,7 +139,7 @@
                 Domicilio = "Avenida San Martín 210",
                 Email = "valeriaromero@gmail.com",
                 FechaNacimiento = DateOnly.FromDateTime(DateTime.Now),
-                RutaImagen = "Images/FalloutBoy.png"
+                RutaImagen = Ruta
             }
         });
     }
